@@ -1,0 +1,17 @@
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\bin\Debug\net6.0\Data.deps.json
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\bin\Debug\net6.0\Data.runtimeconfig.json
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\bin\Debug\net6.0\Data.dll
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\bin\Debug\net6.0\Data.pdb
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\bin\Debug\net6.0\Models.dll
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\bin\Debug\net6.0\Models.pdb
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\obj\Debug\net6.0\Data.csproj.AssemblyReference.cache
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\obj\Debug\net6.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\obj\Debug\net6.0\Data.AssemblyInfoInputs.cache
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\obj\Debug\net6.0\Data.AssemblyInfo.cs
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\obj\Debug\net6.0\Data.csproj.CoreCompileInputs.cache
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\obj\Debug\net6.0\Data.csproj.CopyComplete
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\obj\Debug\net6.0\Data.dll
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\obj\Debug\net6.0\refint\Data.dll
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\obj\Debug\net6.0\Data.pdb
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\obj\Debug\net6.0\Data.genruntimeconfig.cache
+D:\DescargasD\proyectospersonales\fullstacknet\appSql\backendApp\appLibro\Data\obj\Debug\net6.0\ref\Data.dll
