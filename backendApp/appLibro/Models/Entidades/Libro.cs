@@ -23,5 +23,9 @@ namespace Models.Entidades
 
         [ForeignKey("CategoriaId")]
         public Categoria Categoria { get; set; }
+
+        public List<AutorLibro> LibrosAutores { get; set; }
+        public PrecioOferta PrecioOferta { get; set; }
+        public List<Review> Reviews { get; set; }
     }
 }

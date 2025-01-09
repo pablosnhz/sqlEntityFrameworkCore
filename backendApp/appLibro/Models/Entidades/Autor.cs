@@ -18,5 +18,7 @@ namespace Models.Entidades
         public string Nombre { get; set; }
         public string WebUrl { get; set; }
 
+        public List<AutorLibro> AutoresLibros { get; set; }
+
     }
 }

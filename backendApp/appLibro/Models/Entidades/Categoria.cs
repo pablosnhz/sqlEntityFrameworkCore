@@ -16,5 +16,6 @@ namespace Models.Entidades
         public int Id { get; set; }
 
         public string Nombre { get; set; }
+        public List<Libro> ListaLibros { get; set; }
     }
 }
