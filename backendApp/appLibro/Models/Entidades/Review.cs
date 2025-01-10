@@ -15,7 +15,7 @@ namespace Models.Entidades
         [Column("ReviewId")]
         public int Id { get; set; }
         public string NombreVotante { get; set; }
-        public int NombreEstrellas { get; set; }
+        public int NumeroEstrellas { get; set; }
         public string Comentario { get; set; }
         public int LibroId { get; set; }
 

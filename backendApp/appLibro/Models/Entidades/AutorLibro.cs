@@ -10,7 +10,7 @@ namespace Models.Entidades
     [Table("AutorLibro")]
     public class AutorLibro
     {
-        [Column("AutorLibro")]
+        [Column("AutorLibroId")]
         public int Id { get; set; }
 
         public int AutorId { get; set; }
