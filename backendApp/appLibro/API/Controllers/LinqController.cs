@@ -417,5 +417,15 @@ namespace API.Controllers
 
             return Ok(listaDetalle);
         }
+
+        //explicando stored procedure en linq
+        [HttpGet("GetRangoSP")]
+        public async Task<ActionResult<IEnumerable<LibroRango>>> GetRangoSP(int rangoInicio, int rangoFin)
+        {
+            var lista = await _context.LibroRango
+                              .FromSqlRaw("LibrosPublicadosRango {0}, {1}", rangoInicio, rangoFin)
+                              .ToListAsync();
+            return Ok(lista);
+        }
     }
 }
