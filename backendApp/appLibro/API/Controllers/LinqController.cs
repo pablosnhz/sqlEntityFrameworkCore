@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Models.CambioPrecioParametros;
 using Models.Dtos;
 using Models.Entidades;
 
@@ -423,8 +424,51 @@ namespace API.Controllers
         public async Task<ActionResult<IEnumerable<LibroRango>>> GetRangoSP(int rangoInicio, int rangoFin)
         {
             var lista = await _context.LibroRango
+                                // fromsqlraw es mas para consultas
                               .FromSqlRaw("LibrosPublicadosRango {0}, {1}", rangoInicio, rangoFin)
                               .ToListAsync();
+            return Ok(lista);
+        }
+
+
+        [HttpPost("CambioPrecioPorCategoriaSP")]
+        public async Task<ActionResult> CambioPrecioPorCategoriaSP(CambioPrecioParametros p)
+        {
+            if(p.Porcentaje <0 || p.Porcentaje>100)
+            {
+                return BadRequest("Porcentaje debe ser Mayor a 0 y Menor a 100");
+            }
+            await _context.Database.ExecuteSqlRawAsync
+                ($"CambioPrecioPorCategoria @categoriaId={p.CategoriaId},@porcentaje={p.Porcentaje}, @texto={p.Texto}");
+            return Ok("Cambio de precio con exito!");
+        }
+
+        // implementando having
+        [HttpGet("GetLibrosHavingQuery")]
+        public async Task<ActionResult<IEnumerable<LibroDto>>> GetLibrosHavingQuery()
+        {
+            var lista = await (from l in _context.Libros.Include(l => l.Categoria)
+                               group l by l.Categoria.Nombre into grp
+                               where grp.Count() > 2
+                               select new
+                               {
+                                   Categoria = grp.Key,
+                                   Cantidad = grp.Count(),
+                               }).ToListAsync();
+            return Ok(lista);
+        }
+
+        [HttpGet("GetLibrosHavingMethod")]
+        public async Task<ActionResult<IEnumerable<LibroDto>>> GetLibrosHavingMethod()
+        {
+            var lista = await _context.Libros.Include(l => l.Categoria)
+                            .GroupBy(l => l.Categoria.Nombre)
+                            .Where(grp => grp.Count() > 2)
+                            .Select(grp => new
+                            {
+                                Categoria = grp.Key,
+                                Cantidad = grp.Count(),
+                            }).ToListAsync();
             return Ok(lista);
         }
     }

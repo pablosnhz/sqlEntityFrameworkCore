@@ -11,5 +11,8 @@ namespace Models.Entidades
         public string NombreAutor { get; set; }
         public string TituloLibro { get; set; }
         public DateTime FechaPublicacion { get; set; }
+
+        // agregamos para stored procedure al hacer un alter table
+        public string TipoLibro { get; set; }
     }
 }
